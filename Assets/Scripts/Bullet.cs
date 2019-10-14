@@ -11,11 +11,9 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Messenger<GameObject>.AddListener(GameEvent.ENEMY_IN_RANGE, SetTarget);
     }
     private void OnDestroy()
     {
-        Messenger<GameObject>.RemoveListener(GameEvent.ENEMY_IN_RANGE, SetTarget);
     }
     void Start()
     {
