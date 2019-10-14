@@ -8,6 +8,7 @@ public class TowerBasic : MonoBehaviour
     private float _nextActionTime = 0.0f;
     private GameObject _target = null;
     private Bullet _bulletController;
+    private bool active = false;
     public float period = 0.1f;
 
 
@@ -25,8 +26,7 @@ public class TowerBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Time.time > _nextActionTime)
+        if (Time.time > _nextActionTime && active)
         {
             _nextActionTime += period;
             if (_target != null)
@@ -49,7 +49,10 @@ public class TowerBasic : MonoBehaviour
         }
 
     }
-
+    public void SetStatus(bool status) {
+        active = status;
+    }
+    
     private void ChangeTarget(GameObject trgt) {
 
         if (_target == trgt)
@@ -66,5 +69,7 @@ public class TowerBasic : MonoBehaviour
             }
         }
     }
+
+
 
 }

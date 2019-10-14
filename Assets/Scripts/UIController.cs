@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameEvent : MonoBehaviour
+public class UIController : MonoBehaviour
 {
-    public const string TOWER_IN_HANDS = "TOWER_IN_HANDS";
-    
+    [SerializeField] GameObject Button;
+    private void Awake()
+    {
+        
+    }
+    private void OnDestroy()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
