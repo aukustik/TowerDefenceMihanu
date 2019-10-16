@@ -5,12 +5,11 @@ using UnityEngine;
 public class TowerBasic : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    private float _nextActionTime = 0.0f;
     private GameObject _target = null;
     private Bullet _bulletController;
     private bool active = false;
     public float period = 0.1f;
-
+    private float _nextActionTime = 0.0f;
 
     private void Awake()
     {
@@ -26,8 +25,9 @@ public class TowerBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > _nextActionTime && active)
+        if (Time.time - Time.deltaTime > _nextActionTime && active)
         {
+            Debug.Log(Time.time);
             _nextActionTime += period;
             if (_target != null)
             {
@@ -51,7 +51,8 @@ public class TowerBasic : MonoBehaviour
     }
     public void SetStatus(bool status) {
         active = status;
-    }
+        _nextActionTime = Time.time;
+}
     
     private void ChangeTarget(GameObject trgt) {
 
