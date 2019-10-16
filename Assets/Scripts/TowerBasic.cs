@@ -27,7 +27,6 @@ public class TowerBasic : MonoBehaviour
     {
         if (Time.time - Time.deltaTime > _nextActionTime && active)
         {
-            Debug.Log(Time.time);
             _nextActionTime += period;
             if (_target != null)
             {
