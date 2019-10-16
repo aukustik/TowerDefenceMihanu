@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerButtonController : MonoBehaviour
 {
-    [SerializeField] private GameObject BasicTower;
+    [SerializeField] private GameObject Tower;
     private bool active = false;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class TowerButtonController : MonoBehaviour
         if (!active)
         {
             active = true;
-            Messenger<GameObject>.Broadcast(GameEvent.TOWER_IN_HANDS, Instantiate(BasicTower));
+            Messenger<GameObject>.Broadcast(GameEvent.TOWER_IN_HANDS, Instantiate(Tower));
 
         }
     }

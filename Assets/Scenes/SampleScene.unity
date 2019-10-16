@@ -465,13 +465,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.29996654, y: -0, z: -0, w: 0.95394975}
+  m_LocalRotation: {x: -0.27059805, y: 0.6532815, z: -0.27059805, w: -0.6532815}
   m_LocalPosition: {x: -3.07, y: 10, z: -30.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 34.911003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 270, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3410002050147602802, guid: 7d5f12883b7c5f043b9c1fdd63f8d665, type: 3}
-  BasicTower: {fileID: 2985952904801686780, guid: 1daf1c300b9581a46b9365e2eef5e294,
+  TowerPlace: {fileID: 7973582184732072349, guid: d1ace6b6c4425cd44af6ec6bd54601a6,
+    type: 3}
+  EnemyPlace: {fileID: 1425937975858514021, guid: 71089952adc1ae340a86d8a32ad4326a,
     type: 3}
   nextActionTime: 0
 --- !u!1 &593424806
@@ -948,8 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc13d3af1a1e147ae64d17e70d95ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicTower: {fileID: 2468559797907206562, guid: a4e518f609a41064898b187fabd37fc2,
-    type: 3}
+  Tower: {fileID: 2468559797907206562, guid: a4e518f609a41064898b187fabd37fc2, type: 3}
 --- !u!1 &1981400669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,8 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc13d3af1a1e147ae64d17e70d95ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicTower: {fileID: 2985952904801686780, guid: 1daf1c300b9581a46b9365e2eef5e294,
-    type: 3}
+  Tower: {fileID: 2985952904801686780, guid: 1daf1c300b9581a46b9365e2eef5e294, type: 3}
 --- !u!114 &1981400672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1989949754
 Transform:
   m_ObjectHideFlags: 0
