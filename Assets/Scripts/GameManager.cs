@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             FollowCursor(tower);
         }
         if (Input.GetMouseButtonDown(0) && tower != null) {
-            TowerCreate(BasicTower);
+            TowerCreate(tower);
         }
     }
     public void TowerCreate(GameObject tower) {
