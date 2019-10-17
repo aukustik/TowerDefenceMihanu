@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private Vector3 _startPosEnemy = new Vector3(-36.0f, 1.5f, 0);
     private Vector3 tempTowerPosition;
     GameObject tower;
+    private List<Vector3> occupiedPositions = new List<Vector3>();
 
     public float nextActionTime = 0.0f;
 
@@ -51,7 +52,14 @@ public class GameManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            
             Vector3 towerPosition = tempTowerPosition;
+            if (occupiedPositions.Contains(towerPosition))
+            {
+                Debug.Log("OCCUPIED");
+                return;
+            }
+            occupiedPositions.Add(towerPosition);
             GameObject towInstance = Instantiate(tower, towerPosition, Quaternion.identity);
             towInstance.GetComponentInChildren<TowerBasic>().SetStatus(true);
         }
